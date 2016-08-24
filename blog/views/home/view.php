@@ -11,3 +11,4 @@
         <p class="content"><?=$this->post['content']?></p>
     </article>
 </main>
+

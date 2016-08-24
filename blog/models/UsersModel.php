@@ -15,4 +15,27 @@ class UsersModel extends BaseModel
             return false;
         }
     }
+
+    public function register(string $username, string $password, string $full_name)
+    {
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+        $statement = self::$db->prepare(
+            "INSERT INTO users (username, password_hash, full_name) VALUES (?,?,?)");
+        $statement->bind_param("sss",$username,$password_hash,$full_name);
+        $statement->execute();
+        if ($statement->affected_rows != 1) {
+            return false;
+        } else {
+            $user_id = self::$db->query("SELECT LAST_INSERT_ID()")->fetch_row()[0];
+            return $user_id;
+        }
+    }
+
+    public function getAll() : array
+    {
+        $statement = self::$db->query(
+            "SELECT * FROM users ORDER BY username");
+
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
 }
