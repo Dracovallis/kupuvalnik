@@ -3,10 +3,10 @@
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
 <aside>
-    <h2>Recent Items</h2>
-    <?php foreach ($this->sidebarItems as $item) : ?>
-        <a href="<?=APP_ROOT?>/home/view/<?= $item['id']?>"><?=
-            htmlentities($item['title'])?></a>
+    <h2>Categories</h2>
+    <?php foreach ($this->sidebarItems as $category) : ?>
+        <a href="<?=APP_ROOT?>/home/view/<?= $category['name']?>"><?=
+            htmlentities($category['name'])?></a>
     <?php endforeach ?>
 </aside>
 
@@ -18,6 +18,7 @@
                 <?= (new DateTime($item['date']))->format('d-M-Y') ?>
                 <i>by</i> <?= htmlentities($item['full_name']) ?>
             </div>
+            <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($item['id']) ?>"><img src="<?= htmlentities($item['image_link']) ?>" alt="thumbnail"></a>
             <p class="description"><?= $item['description'] ?></p>
         <?php endforeach ?>
     </article>
