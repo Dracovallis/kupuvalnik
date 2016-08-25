@@ -8,5 +8,5 @@
     <div><label for="password">Password:</label></div>
     <input id="password" type="password" name="password" />
     <div><input type="submit" value="Login" />
-        <a href="<?=APP_ROOT?>/users/register">[Go to Register]</a> </div>
+        <a href="<?=APP_ROOT?>/users/register">[Go to Register]</a></div>
 </form>

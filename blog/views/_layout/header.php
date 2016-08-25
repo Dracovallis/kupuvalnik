@@ -14,8 +14,8 @@
     <a href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/site-logo.png"></a>
     <a href="<?=APP_ROOT?>/">Home</a>
     <?php if ($this->isLoggedIn) : ?>
-        <a href="<?=APP_ROOT?>/posts">Posts</a>
-        <a href="<?=APP_ROOT?>/posts/create">Create Post</a>
+        <a href="<?=APP_ROOT?>/items">Items</a>
+        <a href="<?=APP_ROOT?>/items/create">Create Item</a>
         <a href="<?=APP_ROOT?>/users">Users</a>
     <?php else: ?>
         <a href="<?=APP_ROOT?>/users/login">Login</a>

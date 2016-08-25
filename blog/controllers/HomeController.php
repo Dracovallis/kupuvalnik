@@ -3,12 +3,13 @@
 class HomeController extends BaseController
 {
     function index() {
-        $lastPosts = $this->model->getLastPosts(5);
-        $this->posts = array_slice($lastPosts, 0 ,3);
-        $this->sidebarPosts = $lastPosts;
+       $lastItems = $this->model->getLastItems(5);
+        $this->items = array_slice($lastItems, 0, 3);
+        $this->sidebarItems = $lastItems;
     }
 	
-	function view($id) {
-        $this->post = $this->model->getPostById($id);
+	function view($id)
+    {
+        $this->item = $this->model->getItemById($id);
     }
 }
