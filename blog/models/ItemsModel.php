@@ -19,20 +19,20 @@ class ItemsModel extends BaseModel
         return $result;
     }
 
-    public function create(string $title, string $description, int $user_id, string $imageLink, float $price) : bool
+    public function create(string $title, string $description, int $user_id, string $imageLink, float $price, string $category) : bool
     {
         $statement = self::$db->prepare(
-            "INSERT INTO items(title, description, user_id, image_link, price) VALUES(?, ?, ?, ?, ?)");
-        $statement->bind_param("ssiss", $title, $description, $user_id, $imageLink, $price);
+            "INSERT INTO items(title, description, user_id, image_link, price, category) VALUES(?, ?, ?, ?, ?, ?)");
+        $statement->bind_param("ssisss", $title, $description, $user_id, $imageLink, $price, $category);
         $statement->execute();
         return $statement->affected_rows == 1;
     }
     
-    public function edit (string $id, string $title, string $description, string $imageLink, float $price) : bool
+    public function edit (string $id, string $title, string $description, string $imageLink,string $category, float $price) : bool
     {
         $statement = self::$db->prepare("UPDATE items SET title = ?, " .
-        "description = ?, image_link = ?, price = ? WHERE id = ?");
-        $statement->bind_param("ssssi", $title, $description, $imageLink, $price, $id);
+        "description = ?, image_link = ?, price = ?, category = ? WHERE id = ?");
+        $statement->bind_param("sssssi", $title, $description, $imageLink, $price, $category, $id);
         $statement->execute();
         return $statement->affected_rows >= 0;
     }
@@ -43,5 +43,13 @@ class ItemsModel extends BaseModel
         $statement->bind_param("i", $id);
         $statement->execute();
         return $statement->affected_rows == 1;
+    }
+
+    public function getAllCategories() : array
+    {
+        $statement = self::$db->query(
+            "SELECT name, id " .
+            "FROM categories ");
+        return $statement->fetch_all(MYSQLI_ASSOC);
     }
 }

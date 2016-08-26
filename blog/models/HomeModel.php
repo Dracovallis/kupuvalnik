@@ -26,7 +26,7 @@ class HomeModel extends BaseModel
     public function getAllCategories() : array
     {
         $statement = self::$db->query(
-            "SELECT name " .
+            "SELECT name, id " .
             "FROM categories ");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }

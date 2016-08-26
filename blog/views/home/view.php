@@ -2,6 +2,11 @@
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
+
+
+
+
+
 <main id="items">
     <img src="<?= htmlentities($this->item['image_link']) ?>" alt="thumbnail">
     <article>

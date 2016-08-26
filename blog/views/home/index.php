@@ -5,7 +5,7 @@
 <aside>
     <h2>Categories</h2>
     <?php foreach ($this->sidebarItems as $category) : ?>
-        <a href="<?=APP_ROOT?>/home/view/<?= $category['name']?>"><?=
+        <a href="<?=APP_ROOT?>/categories/view/<?= $category['id']?>"><?=
             htmlentities($category['name'])?></a>
     <?php endforeach ?>
 </aside>
