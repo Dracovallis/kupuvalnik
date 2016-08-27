@@ -4,9 +4,9 @@ class HomeController extends BaseController
 {
     function index()
     {
-        $lastItems = $this->model->getLastItems(5);
+        $lastItems = $this->model->getLastItems(8);
         $categories = $this->model->getAllCategories();
-        $this->items = array_slice($lastItems, 0, 5);
+        $this->items = array_slice($lastItems, 0, 8);
         $this->sidebarItems = $categories;
     }
 

@@ -24,7 +24,7 @@
     <?php endif; ?>
     <?php if ($this->isLoggedIn) : ?>
         <div id="logged-in-info">
-            <span>Hello, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
+            <div class="current-user-icon-container"><img class="current-user-icon" src="<?=APP_ROOT?>/content/images/user.png" alt="user"></div> <div class="current-user-text-container"><span class="current-user-text" ><b><?=htmlspecialchars($_SESSION['username'])?></b></span></div>
             <form method="post" action="<?=APP_ROOT?>/users/logout">
                 <input type="submit" value="Logout"/>
             </form>

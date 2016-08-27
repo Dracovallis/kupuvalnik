@@ -1,10 +1,8 @@
 <?php $this->title = 'Welcome to My Blog'; ?>
 <link rel="stylesheet" type="text/css" href="blog/content/home-styles.css"/>
 
-<h1><?= htmlspecialchars($this->title) ?></h1>
-
-<aside>
-    <h2>Categories</h2>
+<aside class="sidebar">
+    <h2 class="sidebar-title">Рубрики</h2>
     <?php foreach ($this->sidebarItems as $category) : ?>
         <a href="<?= APP_ROOT ?>/categories/view/<?= $category['id'] ?>"><?=
             htmlentities($category['name']) ?></a>
@@ -24,11 +22,11 @@
                     <div class="title"><h2><?= htmlentities($item['title']) ?></h2></div>
                     <div class="date-author-price">
                         <div class="date-and-author-div">
-                            <div class="date"><i>Date: </i>
+                            <div class="date">
                                 <?= (new DateTime($item['date']))->format('d-M-Y') ?>
                             </div>
                             <div class="author">
-                                <i>Author: </i> <?= htmlentities($item['full_name']) ?>
+                                <img class="user-icon" src="<?=APP_ROOT?>/content/images/user.png" alt="user"> <?= htmlentities($item['full_name']) ?>
                             </div>
                         </div>
                         <div class="price">

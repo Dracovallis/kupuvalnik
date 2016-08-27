@@ -32,7 +32,7 @@ class ItemsController extends BaseController
             }
             $imageLink = $_POST['item_image_link'];
             if (strlen($imageLink) < 5) {
-                $imageLink = "http://www.stripersonline.com/surftalk/uploads/monthly_04_2015/post-452-0-79597500-1428530667.jpg";
+                $imageLink = "http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png";
             }
             $file_headers = @get_headers($imageLink);
             $linkIsReal = true;
@@ -112,7 +112,7 @@ class ItemsController extends BaseController
             }
             $imageLink = $_POST['item_image_link'];
             if (strlen($imageLink) < 2 || $imageLink == null) {
-                $imageLink = "http://www.stripersonline.com/surftalk/uploads/monthly_04_2015/post-452-0-79597500-1428530667.jpg";
+                $imageLink = "http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png";
             } else {
 
 

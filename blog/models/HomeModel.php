@@ -2,7 +2,7 @@
 
 class HomeModel extends BaseModel
 {
-    public function getLastItems(int $maxCount = 5) : array
+    public function getLastItems(int $maxCount = 8) : array
     {
         $statement = self::$db->query(
             "SELECT items.id, title, description, date, full_name, image_link, price " .
