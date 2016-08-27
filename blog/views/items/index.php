@@ -8,6 +8,7 @@
         <th>Description</th>
         <th>Date</th>
         <th>Author ID</th>
+        <th>Category</th>
         <th>Action</th>
     </tr>
     <?php foreach ($this->items as $item) : ?>
@@ -17,6 +18,7 @@
         <td><?= cutLongText($item['description']) ?></td>
         <td><?= htmlspecialchars($item['date']) ?></td>
         <td><?= $item['user_id'] ?></td>
+        <td><?= $item['category'] ?></td>
         <td><a href="<?=APP_ROOT?>/items/edit/<?=$item['id']?> ">[Edit]</a>
             <a href="<?=APP_ROOT?>/items/delete/<?=$item['id']?> ">[Delete]</a></td>
     </tr>

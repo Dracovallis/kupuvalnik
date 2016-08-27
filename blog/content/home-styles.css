@@ -1,0 +1,124 @@
+.all-items {
+    margin-left: 30px;
+}
+.individual-item {
+
+    color: black;
+    float: left;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 45px;
+    padding: 10px;
+    width: 400px;
+    height: 300px;
+    background: #f5f9fb;
+    border: 1px solid #d6e7ef;
+    display: inline-block;
+    box-shadow: inset 0 0 20px #ddebf2;
+    word-wrap: break-word;
+}
+
+.home-image-thumbnail {
+    width: 150px;
+    height: 150px;
+
+    display: inline-block;
+    float: left;
+    border-radius: 10px;
+}
+
+
+
+.item-info {
+    display: inline-block;
+    font-stretch: condensed;
+    float: left;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+
+}
+
+.title {
+    word-wrap: break-word;
+    font-size: 11px;
+    overflow: hidden;
+    white-space: nowrap; /* Don't forget this one */
+    text-overflow: ellipsis;
+    height: 74px;
+    width: 240px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+
+    white-space: pre-wrap; /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word;
+
+    background-color: #77ff77;
+
+}
+.date-and-author-div {
+    display: inline-block;
+    float: left;
+    width: 150px;
+}
+.date {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #77ff77;
+
+}
+
+.author {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #77ff77;
+
+}
+.date-author-price {
+    height: 74px;
+}
+.price {
+    height: 49px;
+    display: inline-block;
+    width: 80px;
+    float: right;
+    margin-top: 9px;
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #77ff77;
+    font-size: 20px;
+
+}
+
+.price-text{
+    margin-top: 10px;
+}
+
+.description {
+    margin-left: 5px;
+    height: 130px;
+
+    float: left;
+
+    text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+
+    overflow: hidden;
+
+}
+
+
+#items {
+    display: table;
+}

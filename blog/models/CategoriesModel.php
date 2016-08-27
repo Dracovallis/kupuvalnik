@@ -2,6 +2,14 @@
 
 class CategoriesModel extends BaseModel
 {
+    public function getAll(int $id) : array
+    {
+        $statement = self::$db->query(
+            "SELECT * FROM items WHERE category = " . (string)$id);
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+
     public function getCategoryById(int $id) : array
     {
         $statement = self::$db->prepare(

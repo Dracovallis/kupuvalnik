@@ -14,7 +14,25 @@ class CategoriesController extends BaseController
     {
         $this->category = $this->model->getCategoryById($id);
         $category = $this->category;
-        $this->items = $this->model->getItemsByCategory($category['id']);
+        //$this->items = $this->model->getItemsByCategory($category['id']);
+
+        $allItems = $this->model->getAll($id);
+
+        $itemsToDisplay = array();
+
+
+
+
+        //for ($i=0; $i<count($allItems); $i++){
+        //    if ($allItems[$i]['category'] != $id){
+        //        //unset($allItems[$i]);
+        //        $allItems[$i] = null;
+        //    }
+        //}
         
+        
+
+        $this->items = $itemsToDisplay;
+        $this->allItems = $allItems;
     }
 }
