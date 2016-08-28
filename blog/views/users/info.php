@@ -2,7 +2,7 @@
 
 
 
-<wrapper class="user-info-wrapper">
+<div class="user-info-wrapper">
 
     <aside class="user-info-sidebar">
        <div class="user-info">Username: <?= htmlspecialchars($this->user['username']); ?> </div>
@@ -59,4 +59,4 @@
 
 
     
-</wrapper>
+</div>
