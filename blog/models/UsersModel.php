@@ -28,11 +28,39 @@ class UsersModel extends BaseModel
         return $user_id;
     }
 
+    public function getCurrentUser(){
+
+        $username = htmlspecialchars($_SESSION['username']);
+
+        $statement = self::$db->prepare(
+            "SELECT * FROM users WHERE username = ?");
+        $statement->bind_param("s",$username);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        return $result;
+
+    }
+
     public function getAll() : array
     {
         $statement = self::$db->query(
             "SELECT * FROM users ORDER BY username");
         return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+
+    public function getItemsByUserId(int $userId) : array
+    {
+        $statement = self::$db->query(
+            "SELECT * " .
+            "FROM items " .
+            "WHERE user_id = " . $userId);
+        //$statement->bind_param("i", $userId);
+        //$statement->execute();
+        //$result = $statement->get_result()->fetch_assoc();
+        $result = $statement->fetch_all(MYSQLI_ASSOC);
+
+        return $result;
     }
 
 }

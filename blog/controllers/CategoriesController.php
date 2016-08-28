@@ -21,17 +21,6 @@ class CategoriesController extends BaseController
         $itemsToDisplay = array();
 
 
-
-
-        //for ($i=0; $i<count($allItems); $i++){
-        //    if ($allItems[$i]['category'] != $id){
-        //        //unset($allItems[$i]);
-        //        $allItems[$i] = null;
-        //    }
-        //}
-        
-        
-
         $this->items = $itemsToDisplay;
         $this->allItems = $allItems;
     }

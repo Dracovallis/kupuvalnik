@@ -8,6 +8,17 @@ class UsersController extends BaseController
         $this->users = $this->model->getAll();
     }
 
+    public function info() 
+    {
+
+
+        $currentUser = $this->model->getCurrentUser();
+        
+        $this->user =  $currentUser;
+
+        $this->items = $this->model->getItemsByUserId($currentUser['id']);
+    }
+
     public function register()
     {
         if ($this->isPost) {

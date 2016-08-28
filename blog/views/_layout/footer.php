@@ -1,6 +1,6 @@
 
     <footer>
-        (c) Blog System, 2016
+        (c) крадено.bg 2016
     </footer>
 
     <?php require_once('fill-posted-fields.php'); ?>
