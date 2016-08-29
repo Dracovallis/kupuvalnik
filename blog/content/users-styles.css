@@ -65,7 +65,6 @@
     display: block;
     transition: 1s;
 
-
 }
 
 .user-info:hover span{
@@ -74,6 +73,9 @@
     padding-right: 17px;
     transition: 0.3s;
 }
+
+
+
 
 .user-info-wrapper {
     top: 400px;
