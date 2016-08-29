@@ -3,8 +3,10 @@
 
 <aside class="sidebar">
     <h2 class="sidebar-title">Рубрики</h2>
+    <br>
     <?php foreach ($this->sidebarItems as $category) : ?>
-        <a href="<?= APP_ROOT ?>/categories/view/<?= $category['id'] ?>"><?=
+        <a href="<?= APP_ROOT ?>/categories/view/<?= $category['id'] ?>"><img src="<?=
+            htmlentities($category['image_link']) ?>" alt="category-img"><?=
             htmlentities($category['name']) ?></a>
     <?php endforeach ?>
 </aside>

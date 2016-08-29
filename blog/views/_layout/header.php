@@ -12,7 +12,8 @@
 
 <body>
 <header>
-    <a href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/site-logo.png"></a>
+
+    <div class="navigation-links">
     <a href="<?=APP_ROOT?>/">Home</a>
     <?php if ($this->isLoggedIn) : ?>
         <a href="<?=APP_ROOT?>/items">Items</a>
@@ -22,6 +23,8 @@
         <a href="<?=APP_ROOT?>/users/login">Login</a>
         <a href="<?=APP_ROOT?>/users/register">Register</a>
     <?php endif; ?>
+    </div>
+    <a class="site-logo" href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/kradenobg-logo.png"></a>
     <?php if ($this->isLoggedIn) : ?>
         <div id="logged-in-info">
             <a href="<?= APP_ROOT ?>/users/info">

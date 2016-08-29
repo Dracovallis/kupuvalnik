@@ -11,9 +11,9 @@ body > header {
     border-radius: 20px;
     font-size: 25px;
 
-    -webkit-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.43);
-    -moz-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.43);
-    box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.43);
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.43);
 }
 
 body > header a {
@@ -22,11 +22,11 @@ body > header a {
     margin-top: 12px;
     color: #f7fff6;
     text-decoration: none;
+    padding-left: 10px;
 }
 
 body > header a:hover {
     color: #f7fff6;
-
 
     /* Safari */
     -webkit-transform: rotate(-5deg);
@@ -57,10 +57,7 @@ body > footer {
     margin: 10px 0;
     text-align: center;
     bottom: 0;
-
-
-
-    
+    height: 40px;
 
 }
 
@@ -128,7 +125,8 @@ body > main:after {
 }
 
 .sidebar {
-    height: 60%; /* 100% Full-height */
+    height: 50%;
+    max-height: 400px; /* 100% Full-height */
     width: 350px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
@@ -139,12 +137,12 @@ body > main:after {
     padding-top: 60px; /* Place content 60px from the top */
     transition: 2s; /* 0.5 second transition effect to slide in the sidenav */
     border-radius: 20px;
-    float: left;
 
-    -webkit-box-shadow: -4px 15px 17px -4px rgba(0,0,0,0.54);
-    -moz-box-shadow: -4px 15px 17px -4px rgba(0,0,0,0.54);
-    box-shadow: -4px 15px 17px -4px rgba(0,0,0,0.54);
+    -webkit-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
 }
+
 .sidebar-title {
     color: #f7fff6;
     font-size: 35px;
@@ -174,7 +172,12 @@ body > main:after {
     display: block;
     transition: 1s;
 
+}
 
+.sidebar a img {
+    height: 20px;
+    width: 20px;
+    margin-right: 9px;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -190,10 +193,7 @@ body > main:after {
     height: 30px;
     width: 30px;
 
-
 }
-
-
 
 .current-user-text-container {
     display: inline-block;
@@ -205,7 +205,7 @@ body > main:after {
 .current-user-icon-container {
     display: inline-block;
     float: left;
-   /* padding-top: 5px;*/
+    /* padding-top: 5px;*/
     padding-right: 10px;
 
 }
@@ -214,14 +214,8 @@ body > main:after {
     /*height: 60px;*/
 }
 
-.user-info-wrapper{
-    padding-top: 200px;
-}
 
-.all-items {
-    margin-left: 400px;
-    margin-top: 100px;
-}
+
 .individual-item {
 
     color: black;
@@ -239,22 +233,19 @@ body > main:after {
     word-wrap: break-word;
     border-radius: 8px;
 
-    -webkit-box-shadow: -4px 15px 17px -4px rgba(0,0,0,0.54);
-    -moz-box-shadow: -4px 15px 17px -4px rgba(0,0,0,0.54);
-    box-shadow: -4px 15px 17px -4px rgba(0,0,0,0.54);
-
+    -webkit-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
 
 }
 
 .individual-item:hover {
-
 
     -webkit-box-shadow: -4px 15px 17px -4px #473d3b;
     -moz-box-shadow: -4px 15px 17px -4px #473d3b;
     box-shadow: -4px 15px 17px -4px #473d3b;
 
 }
-
 
 .home-image-thumbnail {
     width: 150px;
@@ -264,8 +255,6 @@ body > main:after {
     float: left;
     border-radius: 10px;
 }
-
-
 
 .item-info {
     display: inline-block;
@@ -299,6 +288,7 @@ body > main:after {
     background-color: #bcebcb;
 
 }
+
 .date-and-author-div {
     display: inline-block;
     float: left;
@@ -306,6 +296,7 @@ body > main:after {
     height: 61px;
 
 }
+
 .date {
     margin-top: 10px;
     margin-left: 10px;
@@ -328,11 +319,11 @@ body > main:after {
 
 }
 
-
 .date-author-price {
     margin-top: 11px;
     height: 74px;
 }
+
 .price {
     height: 49px;
     display: inline-block;
@@ -347,7 +338,7 @@ body > main:after {
 
 }
 
-.price-text{
+.price-text {
     margin-top: 10px;
 }
 
@@ -373,10 +364,45 @@ body > main:after {
     margin-left: 5px;
 }
 
-
 #items {
     display: table;
+    padding-left: 400px;
+    padding-top:100px;
 }
 
+.edit-form {
+    padding-top: 100px;
+    display: inline-block;
+    float: left;
+}
+
+.navigation-links {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.image-preview {
+    display: inline-block;
+    padding-left: 50px;
+    padding-top: 100px;
+    float: left;
+    border-radius: 5px;
+
+}
+
+.image-preview img {
+    border-radius: 5px;
+}
+
+.site-logo img {
+    height: 50px;
+    width: 300px;
+}
+
+.site-logo {
+
+    margin-left: 150px;
+
+}
 
 

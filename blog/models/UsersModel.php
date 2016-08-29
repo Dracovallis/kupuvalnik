@@ -63,4 +63,15 @@ class UsersModel extends BaseModel
         return $result;
     }
 
+
+
+    public function edit (string $id, string $fullName, string $email, string $address, string $phoneNumber) : bool
+    {
+        $statement = self::$db->prepare("UPDATE users SET full_name = ?, " .
+            "email = ?, address = ?, phone_number = ? WHERE id = ?");
+        $statement->bind_param("ssssi", $fullName, $email, $address, $phoneNumber, $id);
+        $statement->execute();
+        return $statement->affected_rows >= 0;
+    }
+
 }
