@@ -10,7 +10,7 @@
     <?php endforeach ?>
 </aside>
 
-<main id="items">
+<main class="main-items">
     <div class="all-items">
         <?php foreach ($this->items as $item) : ?>
             <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($item['id']) ?>">

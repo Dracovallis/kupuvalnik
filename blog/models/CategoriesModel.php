@@ -2,13 +2,15 @@
 
 class CategoriesModel extends BaseModel
 {
-    public function getAll(int $id) : array
+    public function getAll() : array
     {
         $statement = self::$db->query(
-            "SELECT * FROM items WHERE category = " . (string)$id);
+            "SELECT * " .
+
+            "FROM items LEFT JOIN users ON items.user_id = users.id ORDER BY items.date DESC");
+
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
-
 
     public function getCategoryById(int $id) : array
     {
@@ -26,23 +28,20 @@ class CategoriesModel extends BaseModel
     public function getAllCategories() : array
     {
         $statement = self::$db->query(
-            "SELECT name " .
+            "SELECT * " .
             "FROM categories ");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getItemsByCategory(string $category) : array
     {
-        $statement = self::$db->prepare(
-            "SELECT items.id, title, description, date, full_name, image_link, price " .
+        $statement = self::$db->query(
+            "SELECT * " .
             "FROM items LEFT JOIN users ON items.user_id = users.id " .
-            "WHERE items.category = ?");
-        $categoryId = intval($category);
-        $statement->bind_param("i", $categoryId);
-        $statement->execute();
-        //$result =
-        $result = $statement->get_result()->fetch_assoc();
-        //return $statement->fetch_all(MYSQLI_ASSOC);
-        return $result;
+            "WHERE items.category = $category");
+
+        return $statement->fetch_all(MYSQLI_ASSOC);
     }
+
+  
 }

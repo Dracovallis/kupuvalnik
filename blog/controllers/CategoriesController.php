@@ -4,10 +4,11 @@ class CategoriesController extends BaseController
 {
     function index()
     {
-       // $lastItems = $this->model->getLastItems(5);
+
         $categories = $this->model->getAllCategories();
-        //$this->items = array_slice($lastItems, 0, 5);
+
         $this->sidebarItems = $categories;
+
     }
 
     function view($id)
@@ -16,12 +17,24 @@ class CategoriesController extends BaseController
         $category = $this->category;
         //$this->items = $this->model->getItemsByCategory($category['id']);
 
-        $allItems = $this->model->getAll($id);
+        $allItems = $this->model->getItemsByCategory($id);
 
         $itemsToDisplay = array();
 
 
         $this->items = $itemsToDisplay;
         $this->allItems = $allItems;
+
+        $categories = $this->model->getAllCategories();
+
+        $this->sidebarItems = $categories;
     }
+    
+    public function getCategoryImage(string $categoryIdFromItem)
+    {
+        $categoryId = (int)$categoryIdFromItem;
+        $category = $this->model->getCategoryById($categoryId);
+        return $category['image_link'];
+    }
+    
 }

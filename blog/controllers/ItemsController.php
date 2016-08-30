@@ -24,25 +24,9 @@ class ItemsController extends BaseController
 
     public function getCategoryImage(string $categoryIdFromItem)
     {
-        $categories = $this->model->getAllCategories();
-
-        
         $categoryId = (int)$categoryIdFromItem;
-
-        //if ($categoryId === null || $categoryId == null || strlen($categoryId) <= 0 || strlen($categoryId) == 0) {
-          //  return 'https://www.familydollar.com/etc/designs/familydollar/clientlibs/img/no_thumbnails.gif';
-
-       // } else {
-           //$categoryIdInt = intval($categoryId);
-           //$category = $this->model->getCategoryById($categoryIdInt);
-           //$categoryImage = $category['image_link'];
-           //return $categoryImage;
-
-            $currentCategory = $categories[$categoryId-1];
-            return $currentCategory['image_link'];
-       // }
-
-
+        $category = $this->model->getCategoryById($categoryId);
+        return $category['image_link'];
     }
 
     public function create()

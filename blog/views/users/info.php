@@ -36,7 +36,7 @@
 
         <?php foreach ($this->items as $item) : ?>
 
-            <div class="individual-item">
+            <div id="individual-item-user-info" class="individual-item">
                 <div class="home-image-thumbnail">
                     <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($item['id']) ?>"><img
                             class="home-image-thumbnail"
