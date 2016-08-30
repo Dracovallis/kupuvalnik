@@ -1,6 +1,6 @@
 body > header {
     background: #8491a3;
-    z-index: 1; /* Stay on top */
+    z-index: 2; /* Stay on top */
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: hidden; /* Disable horizontal scroll */
     position: fixed; /* Stay in place */
@@ -71,26 +71,39 @@ table th, table td {
 
 ul#messages li {
     display: block;
-    width: 80%;
-    margin: 5px auto;
+    width: 90%;
     text-align: center;
     padding: 5px;
     border-radius: 5px;
+    z-index: 1;
+    position: fixed;
+    margin-top: 65px;
+    margin-left: 12px;
+
+
+
 }
 
 ul#messages li.info {
+    z-index: 1;
+    position: fixed;
     background: #7f7;
+
 }
 
 ul#messages li.error {
     background: #d00;
     color: white;
+
+
 }
 
 .validation-error {
     vertical-align: top;
     margin-left: 10px;
     color: red;
+
+    position: fixed;
 }
 
 #logged-in-info {
@@ -133,7 +146,7 @@ body > main:after {
 .sidebar {
     height: 50%;
     max-height: 400px; /* 100% Full-height */
-    width: 350px;
+    width: 356px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     margin-top: 100px;
@@ -252,6 +265,51 @@ body > main:after {
 
 }
 
+
+.single-item-buttons {
+    height: 22px;
+    max-height: 22px;
+    margin-top: 125px;
+    width: 100%;
+    bottom: 0px;
+}
+
+.details-button {
+
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 25%;
+    border-radius: 10px;
+    background-color: #bcebcb;
+    bottom: 0px;
+    text-decoration: none;
+    width: 150px;
+
+    text-decoration: none;
+
+    color: black;
+}
+
+.edit-button {
+    display: inline-block;
+    float: right;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #bcebcb;
+    bottom: 0px;
+    text-decoration: none;
+
+    color: black;
+}
+
+.edit-button:hover,.details-button:hover {
+    background-color: #8491a3;
+    color:white;
+}
+
+
 #edit-button {
     display: inline-block;
     background-color: orangered;
@@ -259,6 +317,7 @@ body > main:after {
     text-align: center;
     width: 25%;
     padding-right: 25px;
+    text-align: center;
 }
 
 #logout-button {
@@ -358,7 +417,7 @@ body > main:after {
     float: right;
     margin-top: 11px;
     margin-left: 10px;
-    margin-right: 5px;
+
     border-radius: 10px;
     background-color: #bcebcb;
     font-size: 20px;
@@ -372,14 +431,11 @@ body > main:after {
 .description {
     margin-left: 5px;
     height: 130px;
-
+    width: 390px;
     float: left;
-
     text-overflow: ellipsis;
-
-    /* Required for text-overflow to do anything */
-
     overflow: hidden;
+    margin-bottom: 10px;
 
 }
 

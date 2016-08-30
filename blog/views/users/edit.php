@@ -1,6 +1,5 @@
 <?php $this->title = 'Edit User Settings'; ?>
 
-
 <div class="edit-form">
     <form method="post">
         <div>Full Name</div>

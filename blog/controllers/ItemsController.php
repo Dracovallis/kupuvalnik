@@ -15,6 +15,33 @@ class ItemsController extends BaseController
     {
         $this->items = $this->model->getAll();
 
+        $categories = $this->model->getAllCategories();
+
+        $this->sidebarItems = $categories;
+
+
+    }
+
+    public function getCategoryImage(string $categoryIdFromItem)
+    {
+        $categories = $this->model->getAllCategories();
+
+        
+        $categoryId = (int)$categoryIdFromItem;
+
+        //if ($categoryId === null || $categoryId == null || strlen($categoryId) <= 0 || strlen($categoryId) == 0) {
+          //  return 'https://www.familydollar.com/etc/designs/familydollar/clientlibs/img/no_thumbnails.gif';
+
+       // } else {
+           //$categoryIdInt = intval($categoryId);
+           //$category = $this->model->getCategoryById($categoryIdInt);
+           //$categoryImage = $category['image_link'];
+           //return $categoryImage;
+
+            $currentCategory = $categories[$categoryId-1];
+            return $currentCategory['image_link'];
+       // }
+
 
     }
 

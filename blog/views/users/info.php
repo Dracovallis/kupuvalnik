@@ -11,8 +11,12 @@
         <div class="user-info"><span><b>Phone:</b></span><br><?= $this->user['phone_number']; ?> </div>
         <div class="user-info"><span><b>E-mail:</b></span><br><?= $this->user['email']; ?> </div>
 
-        <a href="<?= APP_ROOT ?>/users/edit/<?= htmlentities($this->user['id']) ?>"><div id="edit-button" class="user-info">Edit</div></a>
-        <a href="<?=APP_ROOT?>/users/logout"><div id="logout-button" class="user-info">Logout</div></a>
+        <a href="<?= APP_ROOT ?>/users/edit/<?= htmlentities($this->user['id']) ?>">
+            <div id="edit-button" class="user-info">Edit</div>
+        </a>
+        <a href="<?= APP_ROOT ?>/users/logout">
+            <div id="logout-button" class="user-info">Logout</div>
+        </a>
 
     </aside>
 
@@ -22,6 +26,13 @@
     <div class="all-items-title"><b>Your Items:</b></div>
 
     <div class="all-items">
+
+        <?php if (count($this->items) <= 0){
+            
+            ?> <div class="no-items"><img src="http://practicallyinspired.com/images/thumb-noitemsfound.png" alt="no-items"></div>
+        <?php } ?>
+        
+            
 
         <?php foreach ($this->items as $item) : ?>
 
@@ -49,6 +60,13 @@
                 <div class="description">
                     <p><?= $item['description'] ?></p>
                 </div>
+
+                <div class="single-item-buttons">
+
+                    <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($item['id']) ?>"><div class="details-button">Details</div></a>
+                    <a href="<?= APP_ROOT ?>/items/edit/<?= htmlentities($item['id']) ?>"><div class="edit-button">Edit</div></a>
+                </div>
+
             </div>
 
         <?php endforeach ?>

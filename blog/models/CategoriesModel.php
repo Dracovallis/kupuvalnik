@@ -13,7 +13,7 @@ class CategoriesModel extends BaseModel
     public function getCategoryById(int $id) : array
     {
         $statement = self::$db->prepare(
-            "SELECT id, name " .
+            "SELECT * " .
             "FROM categories " .
             "WHERE id = ?");
         $statement->bind_param("i", $id);

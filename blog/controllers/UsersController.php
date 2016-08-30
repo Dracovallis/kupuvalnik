@@ -8,7 +8,6 @@ class UsersController extends BaseController
         $this->users = $this->model->getAll();
 
 
-
     }
 
     public function info()
@@ -86,38 +85,43 @@ class UsersController extends BaseController
 
         $this->user = $currentUser;
 
-
-        if ($this->isPost) {
-            $fullName = $_POST['user_full_name'];
-            if (strlen($fullName) < 1) {
-                $this->setValidationError("user_full_name", "You must enter a name!");
-            }
-            $email = $_POST['user_email'];
-            if (strlen($email) < 1) {
-                $this->setValidationError("user_email", "E-mail cannot be empty");
-            }
-
-            $address = $_POST['user_address'];
-            if (strlen($address) < 5) {
-                $this->setValidationError("user_address", "Incorrect Address!");
-            }
-
-
-            $phoneNumber = $_POST['user_phone_number'];
-            if (strlen($phoneNumber) < 6) {
-                $this->setValidationError("user_phone_number", "Phone number error!");
-            }
-
-
-            if ($this->formValid()) {
-                if ($this->model->edit($id, $fullName, $email, $address, $phoneNumber)) {
-                    $this->addInfoMessage("User details edited.");
-                } else {
-                    $this->addErrorMessage("Error: cannot edit user description.");
+        if ($this->user['id'] != $id) {
+            $this->addErrorMessage("Nice try. You cannot edit other users.");
+            $this->redirect('users', 'info');
+        } else {
+            
+            if ($this->isPost) {
+                $fullName = $_POST['user_full_name'];
+                if (strlen($fullName) < 1) {
+                    $this->setValidationError("user_full_name", "You must enter a name!");
                 }
-                $this->redirect('items');
-            }
+                $email = $_POST['user_email'];
+                if (strlen($email) < 1) {
+                    $this->setValidationError("user_email", "E-mail cannot be empty");
+                }
 
+                $address = $_POST['user_address'];
+                if (strlen($address) < 5) {
+                    $this->setValidationError("user_address", "Incorrect Address!");
+                }
+
+
+                $phoneNumber = $_POST['user_phone_number'];
+                if (strlen($phoneNumber) < 6) {
+                    $this->setValidationError("user_phone_number", "Phone number error!");
+                }
+
+
+                if ($this->formValid()) {
+                    if ($this->model->edit($id, $fullName, $email, $address, $phoneNumber)) {
+                        $this->addInfoMessage("User details edited.");
+                    } else {
+                        $this->addErrorMessage("Error: cannot edit user description.");
+                    }
+                    $this->redirect('users', 'info');
+                }
+
+            }
         }
     }
 }
