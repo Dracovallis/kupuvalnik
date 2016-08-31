@@ -37,7 +37,7 @@
 
 
         <div class="edit-create-item-buttons"><input class="edit-create-item-edit-button" type="submit" value="Промени">
-            <div class="edit-create-item-cancel-button"> <a href="<?= APP_ROOT ?>/items">Отказ</a></div></div>
+            <div class="edit-create-item-cancel-button"> <a href="<?= APP_ROOT ?>/users/info">Отказ</a></div></div>
 
 
     </form>
@@ -52,16 +52,9 @@
 
         var img = document.createElement("img");
         img.src = document.getElementById('item_image_link').value;
-        //img.width = width;
-        //img.height = height;
         img.alt = alt;
-
         img.width = 300;
         img.height = 300;
-
-        // This next line will just add it to the <body> tag
-        // document.body.appendChild(img);
-
         document.getElementById('imageDiv').innerHTML = "";
         document.getElementById('imageDiv').appendChild(img);
     }

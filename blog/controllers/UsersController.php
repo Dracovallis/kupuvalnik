@@ -36,9 +36,21 @@ class UsersController extends BaseController
             if (strlen($full_name) > 200) {
                 $this->setValidationError("full_name", "Invalid full name");
             }
+            $phoneNumber = $_POST['phone_number'];
+            if (strlen($phoneNumber) > 15) {
+                $this->setValidationError("phone_number", "Invalid phone number");
+            }
+            $address = $_POST['address'];
+            if (strlen($address) > 1000) {
+                $this->setValidationError("phone_number", "Invalid address");
+            }
+            $email = $_POST['email'];
+            if (strlen($email) > 100) {
+                $this->setValidationError("phone_number", "Invalid email");
+            }
 
             if ($this->formValid()) {
-                $userId = $this->model->register($username, $password, $full_name);
+                $userId = $this->model->register($username, $password, $full_name, $phoneNumber, $address, $email);
                 if ($userId) {
                     $_SESSION['username'] = $username;
                     $_SESSION['user_id'] = $userId;

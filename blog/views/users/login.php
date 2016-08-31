@@ -9,7 +9,7 @@
             <input id="password" type="password" name="password"/>
         </div>
         <div class="register-gotologin-buttons">
-            <div><input class="login-register-button" type="submit" value="Login"/></div>
+            <div><input class="login-register-button" type="submit" value="Вход"/></div>
         </div>
     </div>
 </form>

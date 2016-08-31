@@ -69,14 +69,15 @@
 
 .category-image {
     float: right;
-    margin-left: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
     z-index: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: hidden; /* Disable horizontal scroll */
     position: fixed; /* Stay in place */
     display: inline-block;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
 }
 
 .category-image img{
@@ -87,8 +88,8 @@
     overflow-y: hidden; /* Disable horizontal scroll */
     position: fixed; /* Stay in place */
     display: inline-block;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px
 }
 
 .category-image img:hover {

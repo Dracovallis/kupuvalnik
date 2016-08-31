@@ -206,6 +206,7 @@
     width: 47%;
     float: right;
     font-size: 170%;
+    color: black;
 
 }
 
@@ -228,4 +229,16 @@
     z-index: 11;
     overflow-x: hidden;
     margin-top: -90px;
+}
+
+#createImageDiv {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    margin-left: 190px;
+    display: inline-block;
+    position: fixed;
+    z-index: 11;
+    overflow-x: hidden;
+    margin-top: -142px;
 }

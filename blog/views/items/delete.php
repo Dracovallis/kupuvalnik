@@ -1,19 +1,20 @@
-<?php $this->title = 'Delete Item'; ?>
-
-<h1>Are you sure you want to delete this item?</h1>
-
-<form method="post">
-    <div>Title:</div>
-    <input type="text" value="<?=htmlspecialchars($this->item['title'])?>" disabled/>
-    <div>Description:</div>
+<div class="edit-form">
+    <form method="post">
+        <div class="edit-create-item-title">
+            <div>Title:</div>
+            <input type="text" value="<?= htmlspecialchars($this->item['title']) ?>" disabled/>
+        </div>
+        <div class="edit-create-item-description">
+            <div>Описание:</div>
     <textarea rows="10" disabled>
-        <?= htmlspecialchars($this->item['description'])?>
+        <?= htmlspecialchars($this->item['description']) ?>
     </textarea>
-    <div>Date:</div>
-    <input type="text" value="<?= htmlspecialchars($this->item['date'])?>" disabled/>
-    <div>Author ID:</div>
-    <input type="text" value="<?=htmlspecialchars($this->item['user_id'])?>" disabled/>
-    <div><input type="submit" value="Delete" />
-        <a href="<?=APP_ROOT?>/items">Cancel</a></div>
-</form>
+        </div>
+        <div class="edit-create-item-buttons">
+
+        <div><input class="edit-create-item-edit-button"  type="submit" value="Delete"/>
+            <a class="edit-create-item-cancel-button" href="<?= APP_ROOT ?>/users/info">Cancel</a></div>
+            </div>
+    </form>
+</div>
 

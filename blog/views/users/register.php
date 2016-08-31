@@ -25,7 +25,7 @@
             <input id="email" type="text" name="email"/>
         </div>
         <div class="register-gotologin-buttons">
-            <div class="login-register-button"><input type="submit" value="Register"/></div>
+            <div class="login-register-button"><input type="submit" value="Регистрирай"/></div>
 
         </div>
     </div>

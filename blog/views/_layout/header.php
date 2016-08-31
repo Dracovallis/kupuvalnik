@@ -19,15 +19,14 @@
     <div class="navigation-links">
 
     <?php if ($this->isLoggedIn) : ?>
-        <a href="<?=APP_ROOT?>/items">Items</a>
-        <a href="<?=APP_ROOT?>/items/create">Create Item</a>
-        <a id="users" href="<?=APP_ROOT?>/users">Users</a>
+        <a href="<?=APP_ROOT?>/items">Обяви</a>
+        <a id="create-item-link" href="<?=APP_ROOT?>/items/create">Създай обява</a>
         <a class="site-logo" href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/kradenobg-logo.png"></a>
     <?php else: ?>
 
-        <a href="<?=APP_ROOT?>/users/login">Login</a>
+        <a href="<?=APP_ROOT?>/users/login">Вход</a>
 
-        <a id="register" href="<?=APP_ROOT?>/users/register">Register</a>
+        <a id="register" href="<?=APP_ROOT?>/users/register">Регистрация</a>
         <a class="site-logo" href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/kradenobg-logo.png"></a>
     <?php endif; ?>
     </div>

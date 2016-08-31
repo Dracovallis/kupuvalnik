@@ -45,4 +45,17 @@ class HomeModel extends BaseModel
         return $result['id'];
 
     }
+
+    public function getCategoryById(int $id) : array
+    {
+        $statement = self::$db->prepare(
+            "SELECT * " .
+            "FROM categories " .
+            "WHERE id = ?");
+        $statement->bind_param("i", $id);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        //$result = $statement->fetch_all(MYSQLI_ASSOC);
+        return $result;
+    }
 }

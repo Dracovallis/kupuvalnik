@@ -58,16 +58,15 @@ body > header > a > img, body > header a {
 body > footer {
     background: #8491a3;
     z-index: 2;
-    margin: 10px ;
+    margin: 10px;
     text-align: center;
     bottom: 0;
     height: 30px;
     line-height: 30px;
     width: 99%;
-    margin-top: 1585px;    /* previous 1070px */
+    margin-top: 1585px; /* previous 1070px */
     /*position: fixed;*/
     border-radius: 15px;
-
 
 }
 
@@ -87,8 +86,6 @@ ul#messages li {
     margin-top: 65px;
     margin-left: 12px;
 
-
-
 }
 
 ul#messages li.info {
@@ -101,7 +98,6 @@ ul#messages li.info {
 ul#messages li.error {
     background: #d00;
     color: white;
-
 
 }
 
@@ -276,7 +272,6 @@ body > main:after {
     height: 310px;
 }
 
-
 .single-item-buttons {
     height: 22px;
     max-height: 22px;
@@ -302,10 +297,10 @@ body > main:after {
     color: black;
 }
 
-.edit-button {
+.delete-button, .edit-button {
     display: inline-block;
     float: right;
-    width: 80px;
+    width: 100px;
     text-align: center;
     border-radius: 10px;
     background-color: #bcebcb;
@@ -315,20 +310,25 @@ body > main:after {
     color: black;
 }
 
-.edit-button:hover,.details-button:hover {
+.edit-button:hover, .details-button:hover  {
     background-color: #8491a3;
-    color:white;
+    color: white;
 }
 
+.delete-button:hover{
+    background-color: red;
+    color: white;
+}
 
 #edit-button {
     display: inline-block;
     background-color: orangered;
     float: left;
-    text-align: center;
     width: 25%;
-    padding-right: 25px;
+    padding-right: 35px;
+    padding-left: 25px;
     text-align: center;
+
 }
 
 #logout-button {
@@ -337,7 +337,8 @@ body > main:after {
     float: right;
     width: 25%;
     text-align: center;
-    padding-right: 25px;
+    padding-right: 35px;
+    padding-left: 35px;
 }
 
 #edit-button:hover, #logout-button:hover {
@@ -463,7 +464,7 @@ body > main:after {
     display: table;
     padding-left: 400px;
     padding-top: 100px;
-    margin-bottom: -1405px;
+    margin-bottom: -1467px;
     height: 515px;
 
     min-height: 515px;
@@ -495,15 +496,16 @@ body > main:after {
 }
 
 .site-logo img {
-
     height: 60px;
     width: 300px;
 }
 
-
-
 #register {
-    margin-right: 329px;
+    margin-right: 290px;
+}
+
+#create-item-link{
+    margin-right: 258px;
 }
 
 #users {
@@ -514,11 +516,6 @@ body > main:after {
     height: 100%;
     min-height: 100%;
 }
-
-/* ------ SINGLE ITEM VIEW -------*/
-/* ------ SINGLE ITEM VIEW -------*/
-/* ------ SINGLE ITEM VIEW -------*/
-/* ------ SINGLE ITEM VIEW -------*/
 
 
 .single-item-all-blocks {
@@ -542,10 +539,14 @@ body > main:after {
     width: 400px;
     max-width: 400px;
 
-
 }
 
 .single-item-block-three {
+    display: inline-block;
+
+}
+
+.single-item-block-four {
     text-align: center;
     display: inline-block;
     width: 400px;
@@ -553,10 +554,31 @@ body > main:after {
     right: 100px;
     float: right;
 
-
 }
 
-.single-item-seller-info-header{
+.single-item-block-three img {
+    width: 120px;
+    height: 120px;
+    margin-left: 30px;
+    margin-bottom: 300px;
+}
+
+.single-item-block-three img:hover {
+    /* Safari */
+    -webkit-transform: rotate(5deg);
+
+    /* Firefox */
+    -moz-transform: rotate(5deg);
+
+    /* IE */
+    -ms-transform: rotate(5deg);
+
+    /* Opera */
+    -o-transform: rotate(5deg);
+    transition: 0.2s;
+}
+
+.single-item-seller-info-header {
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -594,14 +616,13 @@ body > main:after {
     top: 0px;
 }
 
-
 .single-item-image {
     width: 320px;
     height: 320px;
     margin-bottom: 15px;
 }
 
-.single-item-image img{
+.single-item-image img {
     width: 320px;
     height: 320px;
     border-radius: 10px;
@@ -627,7 +648,7 @@ body > main:after {
     background-color: #bcebcb;
 }
 
-.single-item-date{
+.single-item-date {
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -645,13 +666,13 @@ body > main:after {
     background-color: #bcebcb;
 }
 
-.single-item-price-container{
+.single-item-price-container {
     text-align: center;
     width: 300px;
 
 }
 
-.single-item-price{
+.single-item-price {
     height: 49px;
     width: 80px;
 
@@ -659,17 +680,19 @@ body > main:after {
     border-radius: 10px;
     background-color: #bcebcb;
     font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     margin: 0 auto;
 }
 
 .single-item-description {
 
-
     float: right;
     text-align: justify;
-    height: 464px;
+
     min-height: 464px;
+    min-width: 400px;
 
     border: dashed;
     border-radius: 10px;

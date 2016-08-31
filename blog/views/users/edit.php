@@ -24,7 +24,7 @@
         </div>
 
         <div class="register-gotologin-buttons">
-            <div><input class="login-register-button" type="submit" value="Запази промените"></div>
+            <div><input class="login-register-button" type="submit" value="Запази"></div>
 
         </div>
 

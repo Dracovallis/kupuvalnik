@@ -14,4 +14,11 @@ class HomeController extends BaseController
     {
         $this->item = $this->model->getItemById($id);
     }
+
+    public function getCategoryImage(string $categoryIdFromItem)
+    {
+        $categoryId = (int)$categoryIdFromItem;
+        $category = $this->model->getCategoryById($categoryId);
+        return $category['image_link'];
+    }
 }

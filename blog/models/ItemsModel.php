@@ -11,7 +11,7 @@ class ItemsModel extends BaseModel
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function getById(int $id)
+    public function getById(int $id) : array 
     {
         $statement = self::$db->prepare(
             "SELECT * FROM items WHERE id = ?");
@@ -80,6 +80,19 @@ class ItemsModel extends BaseModel
         $result = $statement->get_result()->fetch_assoc();
         //$result = $statement->fetch_all(MYSQLI_ASSOC);
         return $result['id'];
+
+    }
+
+    public function getCurrentUser(){
+
+        $username = htmlspecialchars($_SESSION['username']);
+
+        $statement = self::$db->prepare(
+            "SELECT * FROM users WHERE username = ?");
+        $statement->bind_param("s",$username);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        return $result;
 
     }
 }
