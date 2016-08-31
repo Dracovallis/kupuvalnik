@@ -1,41 +1,49 @@
-<?php $this->title = 'Edit Existing Item'; ?>
-
-
 <div class="edit-form">
     <form method="post">
-        <div>Title:</div>
-        <input type="text" name="item_title" value="<?= htmlspecialchars($this->item['title']) ?>"/>
-        <div>Image URL:</div>
-        <input type="text" id="item_image_link" name="item_image_link"
-               value="<?= htmlspecialchars($this->item['image_link']) ?>"/>
-        <div><input type="button" onclick="show_image('http://orig10.deviantart.net/14d5/f/2010/183/6/c/random_item_stock_29_by_storms_stock.jpg',
-                 '  No Preview');" value="Preview Image"></div>
+        <div class="edit-create-item-title">
+            <div>ЗАГЛАВИЕ</div>
+            <input type="text" name="item_title" value="<?= htmlspecialchars($this->item['title']) ?>"/>
+        </div>
+        <div class="edit-create-item-url">
+            <div>Линк към изображението:</div>
+            <input type="text" id="item_image_link" name="item_image_link"
+                   value="<?= htmlspecialchars($this->item['image_link']) ?>"/>
+            <div><input type="button" id="item_image_button" onclick="show_image('http://orig10.deviantart.net/14d5/f/2010/183/6/c/random_item_stock_29_by_storms_stock.jpg',
+                 '  No Preview');" value="Виж изображението"></div>
+            <div id="imageDiv"></div>
+        </div>
+        <div class="edit-create-item-description">
+            <div>Описание:</div>
+            <textarea rows="10" name="item_description"><?=
+                htmlspecialchars($this->item['description']) ?></textarea>
+        </div>
+        <div class="edit-create-item-category">
+            <div>Категория:</div>
+            <select name="item_category">
+                <option value="none">-Изберете категория-</option>
+                <?php foreach ($this->dropDownOptions as $option) : ?>
+                    <option value=" <?= htmlentities($option['id']) ?> "> <?= htmlentities($option['name']) ?> </option>
 
-        <div>Description:</div>
-    <textarea rows="10" name="item_description"><?=
-        htmlspecialchars($this->item['description']) ?></textarea>
-        <div>Category:</div>
-        <select name="item_category">
-            <option value="none">-Изберете категория-</option>
-            <?php foreach ($this->dropDownOptions as $option) : ?>
-                <option value=" <?= htmlentities($option['id']) ?> "> <?= htmlentities($option['name']) ?> </option>
-
-            <?php endforeach ?>
-        </select>
-        <div>Price:</div>
-        <input type="number" step="0.01" name="item_price" value="<?= htmlspecialchars($this->item['price']) ?>"/>
-
+                <?php endforeach ?>
+            </select>
+        </div>
+        <div class="edit-create-item-price">
+            <div>Цена:</div>
+            <input type="number" step="0.01" name="item_price" value="<?= htmlspecialchars($this->item['price']) ?>"/>
+        </div>
 
         <input type="text" name="item_date" value="<?=
         htmlspecialchars($this->item['date']) ?>" style="display: none" disabled/>
 
-        <div><input type="submit" value="Edit">
-            <a href="<?= APP_ROOT ?>/items">[Cancel]</a></div>
+
+        <div class="edit-create-item-buttons"><input class="edit-create-item-edit-button" type="submit" value="Промени">
+            <div class="edit-create-item-cancel-button"> <a href="<?= APP_ROOT ?>/items">Отказ</a></div></div>
+
+
     </form>
 </div>
 
 
-<div class="image-preview" id="imageDiv"></div>
 
 
 <script>
@@ -60,7 +68,3 @@
 
 
 </script>
-
-
-
-

@@ -64,7 +64,7 @@ body > footer {
     height: 30px;
     line-height: 30px;
     width: 99%;
-    margin-top: 1070px;    /* previous 550px */
+    margin-top: 1585px;    /* previous 1070px */
     /*position: fixed;*/
     border-radius: 15px;
 
@@ -462,7 +462,11 @@ body > main:after {
     display: table;
     padding-left: 400px;
     padding-top: 100px;
-    margin-bottom: -890px;
+    margin-bottom: -1405px;
+    height: 515px;
+
+    min-height: 515px;
+
 }
 
 .edit-form {

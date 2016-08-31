@@ -14,7 +14,7 @@
 <main class="main-items">
     <div class="all-items">
         <?php foreach ($this->items as $item) : ?>
-            <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($item['id']) ?>">
+            <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($this->model->getItemId($item['title'])) ?>">
                 <div class="individual-item">
                     <div class="home-image-thumbnail">
                         <img

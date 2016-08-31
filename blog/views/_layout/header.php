@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles.css" />
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/users-styles.css" />
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/all-items-styles.css" />
+    <link rel="stylesheet" href="<?=APP_ROOT?>/content/edit-create-login-register-styles.css" />
     <link rel="icon" href="<?=APP_ROOT?>/content/images/favicon.ico" />
     <script src="<?=APP_ROOT?>/content/scripts/jquery-3.0.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/scripts/blog-scripts.js"></script>

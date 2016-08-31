@@ -30,4 +30,19 @@ class HomeModel extends BaseModel
             "FROM categories ");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function getItemId(string $itemTitle)
+    {
+
+        $statement = self::$db->prepare(
+            "SELECT * " .
+            "FROM items " .
+            "WHERE title = ?");
+        $statement->bind_param("s", $itemTitle);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        //$result = $statement->fetch_all(MYSQLI_ASSOC);
+        return $result['id'];
+
+    }
 }

@@ -15,8 +15,14 @@
     <main class="main-items">
         <!--<div class="all-items-plus-image"> -->
             <div class="all-items">
+
+                <?php if (count($this->allItems) <= 0){
+
+                    ?> <div id="category-no-items" class="no-items"><img src="http://practicallyinspired.com/images/thumb-noitemsfound.png" alt="no-items"></div>
+                <?php } ?>
+
                 <?php foreach ($this->allItems as $item) : ?>
-                    <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($item['id']) ?>">
+                    <a href="<?= APP_ROOT ?>/home/view/<?= htmlentities($this->model->getItemId($item['title'])) ?>">
                         <div class="all-items-individual-item">
                             <div class="home-image-thumbnail">
                                 <img

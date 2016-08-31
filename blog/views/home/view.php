@@ -1,19 +1,17 @@
 <?php $this->title = $this->item['title']; ?>
 
-<h1><?=htmlspecialchars($this->title)?></h1>
+<main id="single-item">
+    <div class="single-item-all-blocks">
 
+        <div class="single-item-block-one">
+            <div class="single-item-image"><img src="<?= htmlentities($this->item['image_link']) ?>" alt="thumbnail"></div>
+            <div class="single-item-title">TODO: Continue from here...</div>
 
-
-
-
-
-<main id="items">
-    <img src="<?= htmlentities($this->item['image_link']) ?>" alt="thumbnail">
-    <article>
-        <div class="date"><i>Posted on</i>
-            <?=(new DateTime($this->item['date']))->format('d-M-Y')?>
-            <i>by</i> <?=htmlentities($this->item['full_name'])?>
         </div>
-        <p class="description"><?=$this->item['description']?></p>
-    </article>
+
+        <div class="single-item-block-two"></div>
+
+        <div class="single-item-block-three"></div>
+
+    </div>
 </main>

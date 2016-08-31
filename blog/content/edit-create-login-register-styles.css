@@ -1,0 +1,231 @@
+.edit-form {
+    display: inline-block;
+    height: 80%;
+    max-height: 1024px; /* 100% Full-height */
+    width: 995px;
+
+    margin-top: -1480px;
+
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+    left: 16%;
+
+    padding-top: 20px; /* Place content 60px from the top */
+
+    transition: 2s; /* 0.5 second transition effect to slide in the sidenav */
+    border-radius: 20px;
+    background-color: #8491a3; /* Black*/
+    -webkit-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    padding-right: 20px;
+}
+
+.edit-create-item-title  {
+    width: 75%;
+    font-size: 200%;
+    text-align: center;
+    padding-left: 10%;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.edit-create-item-title input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-color:#f5f9fb;
+    border:none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 150%;
+}
+
+.edit-create-item-title input:focus {
+    background-color:#bcebcb;
+}
+
+
+
+.edit-create-item-url {
+
+    font-size: 150%;
+    text-align: center;
+    padding-left: 10%;
+    margin-left: 15.5%;
+    display: inline-block;
+    width: 52%;
+}
+
+
+.edit-create-item-url input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-color:#f5f9fb;
+    border:none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 100%;
+    display: inline-block;
+}
+
+.edit-create-item-url input:focus {
+    background-color:#bcebcb;
+}
+
+#item_image_link {
+    float: left;
+    width: 242px;
+
+}
+
+#item_image_button:hover {
+    background-color:#bcebcb;
+    cursor: pointer;
+}
+
+
+#item_image_button {
+    float: right;
+    width: 242px;
+
+}
+
+.edit-create-item-description {
+
+    text-align: center;
+    padding-left: 24%;
+    margin-left: -235px;
+    font-size: 130%;
+    text-align: center;
+    width: 103%;
+
+}
+
+.edit-create-item-description textarea {
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-color:#f5f9fb;
+    border:none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 100%;
+    display: inline-block;
+    width: 50%
+}
+
+.edit-create-item-description textarea:focus {
+    background-color:#bcebcb;
+}
+
+.edit-create-item-category {
+    margin-top: 2%;
+    margin-left: 26%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f5f9fb;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 100%;
+    display: inline-block;
+    width: 26.5%;
+
+
+}
+
+.edit-create-item-price {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f5f9fb;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 100%;
+    display: inline-block;
+    width: 25%;
+}
+
+.edit-create-item-buttons {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    text-align: center;
+    font-size: 100%;
+    display: inline-block;
+    margin-left: 26.5%;
+    margin-top: 3%;
+
+
+    width: 51%;
+}
+
+.edit-create-item-buttons:hover {
+ cursor: pointer;
+}
+
+.edit-create-item-buttons:hover input{
+    cursor: pointer;
+}
+
+
+.edit-create-item-edit-button {
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-color:#f5f9fb;
+    border:none;
+    border-radius: 20px;
+    text-align: center;
+
+    display: inline-block;
+    float: left;
+    width: 50%;
+    font-size: 160%;
+}
+
+.edit-create-item-cancel-button {
+
+    text-decoration: none;
+    background-color: #f5f9fb;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 1%;
+    display: inline-block;
+    width: 47%;
+    float: right;
+    font-size: 170%;
+
+}
+
+.edit-create-item-cancel-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.edit-create-item-cancel-button:hover,.edit-create-item-edit-button:hover {
+    background-color:#bcebcb;
+}
+
+#imageDiv img {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    margin-left: 300px;
+    display: inline-block;
+    position: fixed;
+    z-index: 11;
+    overflow-x: hidden;
+    margin-top: -90px;
+}
