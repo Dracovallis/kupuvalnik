@@ -1,12 +1,15 @@
-<?php $this->title = 'Login'; ?>
-
-<h1><?= htmlspecialchars($this->title) ?></h1>
-
 <form method="post">
-    <div><label for="username">Username:</label></div>
-    <input id="username" type="text" name="username" />
-    <div><label for="password">Password:</label></div>
-    <input id="password" type="password" name="password" />
-    <div><input type="submit" value="Login" />
-        <a href="<?=APP_ROOT?>/users/register">[Go to Register]</a></div>
+    <div class="register-form">
+        <div class="login-username">
+            <div><label for="username">Потребител:</label></div>
+            <input id="username" type="text" name="username"/>
+        </div>
+        <div class="login-password">
+            <div><label for="password">Парола:</label></div>
+            <input id="password" type="password" name="password"/>
+        </div>
+        <div class="register-gotologin-buttons">
+            <div><input class="login-register-button" type="submit" value="Login"/></div>
+        </div>
+    </div>
 </form>

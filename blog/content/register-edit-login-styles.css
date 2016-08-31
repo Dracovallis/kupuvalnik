@@ -1,0 +1,157 @@
+.register-form {
+    display: inline-block;
+    height: auto;
+    max-height: 1024px; /* 100% Full-height */
+    width: 1040px;
+
+    margin-top: -1460px;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+    left: 240px;
+
+    padding-top: 20px; /* Place content 60px from the top */
+
+    transition: 2s; /* 0.5 second transition effect to slide in the sidenav */
+    border-radius: 20px;
+    background-color: #8491a3; /* Black*/
+    -webkit-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+    box-shadow: -4px 15px 17px -4px rgba(0, 0, 0, 0.54);
+
+}
+
+.login-username {
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.login-username input {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-username input:focus {
+    background-color: #bcebcb;
+}
+
+.login-password {
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.login-password input {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-password input:focus {
+    background-color: #bcebcb;
+}
+
+.login-full-name {
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.login-full-name input {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-full-name input:focus {
+    background-color: #bcebcb;
+}
+
+.login-address {
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.login-address textarea {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 25px;
+    width: 316px;
+    height: 100px;
+}
+
+.login-address textarea:focus {
+    background-color: #bcebcb;
+}
+
+.login-phone-number {
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.login-phone-number input {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-phone-number input:focus {
+    background-color: #bcebcb;
+}
+
+.login-email {
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.login-email input {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-email input:focus{
+    background-color: #bcebcb;
+}
+
+.register-gotologin-buttons {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.login-register-button input {
+    padding: 0;
+    border: none;
+    background: none;
+    width: 310px;
+}
+
+.login-register-button {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 310px;
+    padding: 10px 10px 10px 10px;
+    background-color: #bcebcb;
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+
+.login-register-button:hover input {
+    cursor: pointer;
+}
+
+.login-register-button:hover  {
+    background-color: #77ff77;
+}
